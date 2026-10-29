@@ -1,6 +1,6 @@
 # SingleOps API map
 
-Generated 2026-10-29T19:32:19.327Z from 0 capture(s). **137 routes.** Shapes only — no client values.
+Generated 2026-10-29T19:32:19.327Z from 0 capture(s). **138 routes.** Shapes only — no client values.
 
 ## Auth
 
@@ -259,6 +259,7 @@ Generated 2026-10-29T19:32:19.327Z from 0 capture(s). **137 routes.** Shapes onl
 
 | Method | Path | Seen | Status | Query | Body keys | Response keys |
 |---|---|---|---|---|---|---|
+| GET | `/tags` | 1 | 200 |  |  | [ id, account_id, name, html_color, created_at, updated_at, tag_type, url ] |
 | POST | `/tags` | 2 |  |  | tag |  |
 | DELETE | `/tags/{id}` | 20 |  |  |  |  |
 | PATCH | `/tags/{id}` | 4 |  |  | tag |  |

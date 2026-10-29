@@ -16219,6 +16219,56 @@
       "readOnly": false
     },
     {
+      "id": "get_tags",
+      "method": "GET",
+      "path": "/tags",
+      "pathParams": [],
+      "queryParams": [],
+      "bodyKind": null,
+      "body": null,
+      "response": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "account_id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "html_color": {
+              "type": "string"
+            },
+            "created_at": {
+              "type": "string"
+            },
+            "updated_at": {
+              "type": "string"
+            },
+            "tag_type": {
+              "type": "integer"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "statuses": [
+        200
+      ],
+      "seen": 1,
+      "verified": true,
+      "auth": "session",
+      "readOnly": true,
+      "summary": "List all tags (id, name, html_color, tag_type). Use the id with update_tag / delete_tag.",
+      "source": "xhr"
+    },
+    {
       "id": "post_tags",
       "method": "POST",
       "path": "/tags",
