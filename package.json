@@ -1,0 +1,44 @@
+{
+  "name": "singleops-mcp-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MCP server for SingleOps (field-service software). Tools are generated from a map of the SingleOps web app's own API. Reads on; writes and deletes flag-gated, dry-run by default.",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "capture": "node scripts/capture.mjs",
+    "login": "node scripts/capture.mjs --login-only",
+    "crawl": "node scripts/capture.mjs auto --auto",
+    "map": "node scripts/har-to-map.mjs",
+    "test": "vitest run",
+    "inspect": "npx @modelcontextprotocol/inspector node dist/index.js",
+    "start:http": "node dist/index.js --http",
+    "docs": "node scripts/gen-readme-tools.mjs",
+    "forms": "node scripts/har-forms.mjs",
+    "stress": "node scripts/stress.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "playwright": "^1.48.0",
+    "stream-json": "^1.9.1",
+    "typescript": "^5.8.2",
+    "vitest": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "bin": {
+    "singleops-mcp-server": "dist/index.js"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zeekeey-jpeg/Single_Ops_MCP.git"
+  }
+}

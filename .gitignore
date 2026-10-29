@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+# Raw traffic and the logged-in session hold client data and live credentials.
+capture/
+state/
+audit/
